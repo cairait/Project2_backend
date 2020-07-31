@@ -1,0 +1,15 @@
+## Models
+
+User must be able to submit a book suggestion with the following model:
+
+{
+  amazon or barnes and noble URL: String,
+  description: String,
+  category: String,
+  likes: Number
+}
+
+User will be able to Create new suggestion, Read everyone else's suggestions, Update their previously submitted suggestion, and Delete their suggestion.
+Other users will be able to like and comment on the suggestions.
+
+
