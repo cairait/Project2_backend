@@ -9,12 +9,12 @@ const app = express(); //creates express application object
 const morgan = require("morgan"); //Brings in Morgan Library
 const cors = require("cors"); //Brings in CORS library
 const mongoose = require("mongoose"); //bring in mongoose library
-const Books = require("../backend/Project2_backend/models.js/books.js")
-const Comments = require("../backend/Project2_backend/models.js/comments.js")
+const Books = require("../models/books.js")
+//const Comments = require("../backend/Project2_backend/models.js/comments.js")
 
 //ROUTERS
-const BooksRouter = require("../backend/Project2_backend/routes/books.js")
-const CommentsRouter = require("../backend/Project2_backend/routes/comments.js")
+// const BooksRouter = require("../backend/Project2_backend/routes/books.js")
+// const CommentsRouter = require("../backend/Project2_backend/routes/comments.js")
 
 //.env file 
 const PORT = process.env.PORT
@@ -82,8 +82,8 @@ app.use(cors())
 ////////////////////
 //These handle sending responses to server requests for spefic endpoints
 
-app.use("/books", BooksRouter) 
-app.use("/comments", CommentsRouter)
+// app.use("/books", BooksRouter) 
+// app.use("/comments", CommentsRouter)
 
 
 
