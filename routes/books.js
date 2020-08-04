@@ -1,14 +1,18 @@
 const express = require('express');
 const BooksRouter = express.Router();
-const { index, create, update } = require('../backend/Project2_backend/controllers.js/books.js')
+
+//this is causing a problem
+const {index, create, update, destroy} = require("../controllers/books.js")
+//READ
+BooksRouter.get('/', index);
 
 //CREATE
 BooksRouter.post('/', create);
 
-//READ
-BooksRouter.get('/', index);
-
 //UPDATE 
-BooksRouter.put('/:bookid', update);
+BooksRouter.put('/:id', update);
+
+//DELETE
+BooksRouter.delete('/:id', destroy);
 
 module.exports = BooksRouter;

@@ -1,15 +1,14 @@
-///////////////////////
-//DEPENDENCIES
-//////////////////////
-// What your app needs to bring in to function
-
 require("dotenv").config(); //reads .env file environmental variables
 const express = require("express"); //Brings in Express Library
 const app = express(); //creates express application object
 const morgan = require("morgan"); //Brings in Morgan Library
 const cors = require("cors"); //Brings in CORS library
 const mongoose = require("mongoose"); //bring in mongoose library
-const Books = require("../models/books.js")
+
+//this is causing a problem
+const BooksRouter = require("./routes/books.js") // VARIABLE IN USE ON LINE 90
+
+//const booksSchema = require("/models/books.js")
 //const Comments = require("../backend/Project2_backend/models.js/comments.js")
 
 //ROUTERS
@@ -31,7 +30,6 @@ const mongoURI = process.env.mongoURI + "booksdb"
 // const mongoURI = process.env.mongoURI + "gifs"; //URI for connecting to database specified in .env
 const db = mongoose.connection; //the mongoose connection object
 const mongoConfigObject = { useNewUrlParser: true, useUnifiedTopology: true }; //Config option to eliminate deprecation warnings
-
 
 ///////////////////////////
 //CONNECT TO DATABASE
@@ -85,7 +83,7 @@ app.use(cors())
 // app.use("/books", BooksRouter) 
 // app.use("/comments", CommentsRouter)
 
-
+app.use('/', BooksRouter)
 
 ///////////////////////////
 //ROOT ROUTE (FOR TESTING)
@@ -101,3 +99,5 @@ app.get("/", (req, res) => {
 app.listen(3000, () => {
   console.log(`Listening on port 3000`);
 });
+
+module.exports = mongoose
