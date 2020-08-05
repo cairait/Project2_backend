@@ -20,7 +20,7 @@ const PORT = process.env.PORT
 const NODE_ENV = process.env.NODE_ENV
 
 //concatenation adds mongoDB
-const mongoURI = process.env.mongoURI + "booksdb"
+const mongoURI = process.env.mongoURI + "Books";
 //////////////////////
 //GlOBAL VARIABLES
 /////////////////////
@@ -28,7 +28,8 @@ const mongoURI = process.env.mongoURI + "booksdb"
 // const PORT = process.env.PORT; //port number for server as defined in environment variables
 // const NODE_ENV = process.env.NODE_ENV; //"development" or "production"
 // const mongoURI = process.env.mongoURI + "gifs"; //URI for connecting to database specified in .env
-const db = mongoose.connection; //the mongoose connection object
+//the mongoose connection object
+//console.log(db)
 const mongoConfigObject = { useNewUrlParser: true, useUnifiedTopology: true }; //Config option to eliminate deprecation warnings
 
 ///////////////////////////
@@ -38,6 +39,7 @@ const mongoConfigObject = { useNewUrlParser: true, useUnifiedTopology: true }; /
 mongoose.connect(mongoURI, mongoConfigObject, () => {
     console.log("CONNECTED TO MONGO");
   });
+  const db = mongoose.connection;
 
   ////////////////////////////
 //CONNECTION MESSAGING
