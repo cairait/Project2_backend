@@ -17,6 +17,7 @@ const CommentsRouter = require("./routes/comments.js");
 // const CommentsRouter = require("../backend/Project2_backend/routes/comments.js")
 
 //.env file 
+
 const PORT = process.env.PORT
 const NODE_ENV = process.env.NODE_ENV
 

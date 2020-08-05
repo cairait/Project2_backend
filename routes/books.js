@@ -4,7 +4,7 @@ const BooksRouter = express.Router();
 //this is causing a problem
 const {index, create, update, destroy} = require("../controllers/books.js")
 //READ
-BooksRouter.get('/books', index);
+BooksRouter.get('/', index);
 
 //CREATE
 BooksRouter.post('/newbook', create);
