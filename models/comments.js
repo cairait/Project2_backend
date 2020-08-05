@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
-​
+
 const {Schema, model} = mongoose
-​
+
 //document structure for comments
 const commentsSchema = new Schema ({
     commenterName: {type: String}, 
@@ -12,12 +12,10 @@ const commentsSchema = new Schema ({
         ref: "Books"
     }
 })
-​
-​
-//create the model for the Schema
-const commentsSchema = model('Comments', commentsSchema);
-​
 
-​
+//create the model for the Schema
+const comment = model('Comments', commentsSchema);
+
+
 //export the Schema
-module.exports = mongoose.model('Comments', commentsSchema)
+module.exports = comment

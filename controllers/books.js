@@ -20,8 +20,8 @@ const index = async (req, res) => {
 const create = async (req, res) => {
         try{
 const createModel = {
-        book: await books.create(req.body),
-        comment: await comments.create(req.body)
+        book: await books.create(req.body.books),
+        comment: await comments.create(req.body.comments)
     }
 
     res.status(200).json(createModel)
@@ -35,8 +35,8 @@ const createModel = {
 const update = async (req, res) => {
     try {
     const updateModel = {
-        book: await books.findByIdAndUpdate(req.params.id, req.body),
-        comment: await comments.findByIdAndUpdate(req.params.id, req.body)
+        book: await books.findByIdAndUpdate(req.params.id, req.body,{new: true}),
+        comment: await comments.findByIdAndUpdate(req.params.id, req.body,{new:true})
     }
 
     res.status(200).json(updateModel)
@@ -53,7 +53,7 @@ const destroy = async (req, res) => {
         book: await books.findByIdAndDelete(req.params.id),
         comment: await comments.findByIdAndDelete(req.params.id)
     }
-    res.json(destroyModel)
+    res.status(200).json(destroyModel)
 
 } catch(error){
 

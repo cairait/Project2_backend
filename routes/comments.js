@@ -1,10 +1,10 @@
 const express = require('express');
 const CommentsRouter = express.Router();
-const { index, create, destroy } = require('../backend/Project2_backend/controllers.js/comments.js')
+const { index, create, destroy } = require('../controllers/comments.js')
 
 
 //CREATE - create a new comment
-CommentsRouter.post('/', create);
+CommentsRouter.post('/:bookid', create);
 
 //READ - show all comments
 CommentsRouter.get('/', index);

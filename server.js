@@ -6,7 +6,8 @@ const cors = require("cors"); //Brings in CORS library
 const mongoose = require("mongoose"); //bring in mongoose library
 
 //this is causing a problem
-const BooksRouter = require("./routes/books.js") // VARIABLE IN USE ON LINE 90
+const BooksRouter = require("./routes/books.js"); // VARIABLE IN USE ON LINE 90
+const CommentsRouter = require("./routes/comments.js");
 
 //const booksSchema = require("/models/books.js")
 //const Comments = require("../backend/Project2_backend/models.js/comments.js")
@@ -20,7 +21,7 @@ const PORT = process.env.PORT
 const NODE_ENV = process.env.NODE_ENV
 
 //concatenation adds mongoDB
-const mongoURI = process.env.mongoURI + "Books";
+const mongoURI = process.env.mongoURI
 //////////////////////
 //GlOBAL VARIABLES
 /////////////////////
@@ -70,7 +71,7 @@ const corsOptions = {
 // MIDDLEWARE
 ////////////////////
 //UTILITY FUNCTIONS THAT RUN BEFORE YOUR ROUTES
-// NODE_ENV === "development" ? app.use(cors()) : app.use(cors(corsOptions)); //ternary operator
+NODE_ENV === "development" ? app.use(cors()) : app.use(cors(corsOptions)); //ternary operator
 // Enables websites in whitelist to make API calls to your server, enables all sites in development
 app.use(express.json()); //Turns JSON from post/put/patch requests and converts them into req.body object
 app.use(morgan("dev")); // Enables Morgan logging, creating more useful terminal logs while server runs
@@ -85,7 +86,8 @@ app.use(cors())
 // app.use("/books", BooksRouter) 
 // app.use("/comments", CommentsRouter)
 
-app.use('/', BooksRouter)
+app.use('/books', BooksRouter)
+app.use('/comments', CommentsRouter)
 
 ///////////////////////////
 //ROOT ROUTE (FOR TESTING)
@@ -98,7 +100,7 @@ app.get("/", (req, res) => {
 // Server Listener
 ////////////////////
 //Gets this server running
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log(`Listening on port 3000`);
 });
 

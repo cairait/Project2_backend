@@ -1,5 +1,6 @@
-// const Comment = require('../backend/Project2_backend/models.js/comments.js');
-// const Book = require('../models.js/books.js');
+const {books, comments} = require("../models/books.js");
+const Book = books
+const Comment = comments
 const mongoose = require('mongoose');
 const objectify = mongoose.Types.ObjectId;
 
@@ -7,13 +8,14 @@ const objectify = mongoose.Types.ObjectId;
 const create = async (req, res) => {
     try {
         //waits for the user to submit their comment & adds to body
-        req.body.bookid = objectify(req.body.bookid);
+        //req.body.bookid = objectify(req.body.bookid);
+        console.log(req.params.bookid)
         const newComment = await Comment.create(req.body);
         console.log(newComment)
         console.count()
 
         //Push new comment
-        let bookOnPage = await Book.findOne({_id: req.body.bookid}).populate('comments'); 
+        let bookOnPage = await Book.findOne({_id: req.params.bookid}) 
         console.log(bookOnPage)
         console.count()
 
@@ -21,12 +23,12 @@ const create = async (req, res) => {
         console.log(bookOnPage)
         console.count()
 
-        //This saves the comment to that provider
+        //This saves the comment to that book
         await bookOnPage.save();
         // console.log(newComment)
         console.count()
 
-        res.status(200).json(newComment) 
+        res.status(200).json(bookOnPage) 
     }
     catch(error){
         res.status(400).send(error)

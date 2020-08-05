@@ -18,11 +18,11 @@ const booksSchema = new Schema ({
 const commentsSchema = new Schema ({
     commenterName: {type: String}, 
     comment: {type: String, required:true},
-    rating: {type: Number},
-    bookid: {
-        type: Schema.Types.ObjectId,
-        ref: "Books"
-    }
+    rating: {type: Number}
+    // bookid: {
+    //      type: Schema.Types.ObjectId,
+    //      ref: "Books"
+    //  }
 })
 
 //create the model for the Schema
