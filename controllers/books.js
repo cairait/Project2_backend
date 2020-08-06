@@ -20,8 +20,8 @@ const index = async (req, res) => {
 const create = async (req, res) => {
         try{
 const createModel = {
-        book: await books.create(req.body.books),
-        comment: await comments.create(req.body.comments)
+        book: await books.create(req.body),
+        //comment: await comments.create(req.body.comments)
     }
 
     res.status(200).json(createModel)
