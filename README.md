@@ -46,22 +46,22 @@ https://github.com/cairait/Project2_frontend/blob/master/bookclubmatrix.jpg
 #### MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Hamburger | H | 4hr | 5hr | -hr|
-| Book Previews | H | 4hr | 5hr | -hr|
-| Regular Nav | H | 4hr | 5hr | -hr|
-| Adding Submit Section | H | 8hr| 10hr | -hr |
-| Other sections and flex| M | 10hr | 12hr | -hr|
-| Working with API | H | 4hrs| 5hr | -hr |
-| Responsive | H | 5hr | 6hr | -hr|
+| Hamburger | H | 4hr | 5hr | 2hr|
+| Book Previews | H | 4hr | 5hr | 4hr|
+| Regular Nav | H | 4hr | 5hr | 2hr|
+| Adding Submit Section | H | 8hr| 10hr | 10hr |
+| Other sections and flex| M | 10hr | 12hr | 12hr|
+| Working with API | H | 4hrs| 5hr | 15hr |
+| Responsive | H | 5hr | 6hr | 6hr|
 
-| Total | H | 41hrs| 49hrs | -hrs |
+| Total | H | 41hrs| 49hrs | 51hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Book Hover | L | 6hr | 10hr | -hr|
-| Make own logo | L | 10hr | 12hr | -hr|
-| Total | H | 16hrs| 22hrs | -hrs |
+| Book Hover | L | 6hr | 10hr | 0hr|
+| Make own logo | L | 10hr | 12hr | 0hr|
+| Total | H | 16hrs| 22hrs | 0hrs |
 
 
 |				
