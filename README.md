@@ -15,13 +15,13 @@
 |Deliverable	| Status	| Time Spent |
 | --- | :---: |  :---: | 
 | Day 1 | Project Proposal | Complete | 8hr |
-| Day 2 | Research & Development	| Incomplete	| |
-| Day 3 | Backend: Build server & create Mongoose models | Inomplete | |
-| Day 4 | Backend: Complete backend, deployment, and test with Postman | Incomplete | |
-| Day 5 | Backend: Basic frontend build & have frontend consume API | Incomplete | |
-| Day 6 | Frontend: Frontend build (mobile first) | Incomplete | |
-| Day 7 | Frontend: Hamburger menu and deploy | Incomplete | |
-| Day 8 | Frontend: Cross-browser testing and final touches  | Incomplete | |
+| Day 2 | Research & Development	| Complete	| 8hr |
+| Day 3 | Backend: Build server & create Mongoose models | Complete | 15hr |
+| Day 4 | Backend: Complete backend, deployment, and test with Postman | Complete | 10hr |
+| Day 5 | Backend: Basic frontend build & have frontend consume API | Complete | 7hr |
+| Day 6 | Frontend: Frontend build (mobile first) | Complete | 5hr |
+| Day 7 | Frontend: Hamburger menu and deploy | Complete | 3hr |
+| Day 8 | Frontend: Cross-browser testing and final touches  | Complete | 5hr |
 | Day 9 | Presentation | Incomplete | |
 
 
